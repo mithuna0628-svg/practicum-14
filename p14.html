@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BizHive Business Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+    color: #263b32;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #203c32;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #a8d5b9;
+}
+
+.hero {
+    background: linear-gradient(120deg, #203c32, #4d8068);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #203c32;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #dcebe2;
+}
+
+section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #203c32;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    color: #4d8068;
+    margin-bottom: 10px;
+}
+
+.quiz-section {
+    background: #eaf1ec;
+}
+
+.quiz-card {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.quiz-progress {
+    color: #4d8068;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quiz-question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 12px;
+}
+
+.quiz-option {
+    padding: 12px;
+    background: #f4f7f5;
+    border: 2px solid #dce5df;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+}
+
+.quiz-option:hover {
+    background: #e2eee6;
+    border-color: #4d8068;
+}
+
+.quiz-option:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.quiz-feedback {
+    margin: 18px 0;
+    font-weight: bold;
+}
+
+.next-btn {
+    background: #203c32;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.next-btn:hover {
+    background: #4d8068;
+}
+
+.next-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.result-box {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact {
+    background: white;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+footer {
+    background: #203c32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">BizHive</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Home -->
+<header class="hero" id="home">
+    <h1>Welcome to BizHive Business Hub</h1>
+    <p>Your platform for business knowledge and management.</p>
+    <a href="#about" class="btn">Get Started</a>
+</header>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>About BizHive</h2>
+    <p>
+        BizHive Business Hub is a platform designed to provide
+        information about business management, teamwork,
+        planning and professional development. It helps users
+        understand important business concepts.
+    </p>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="service-card">
+            <h3>Business Planning</h3>
+            <p>Learn how to plan and organize business activities.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Task Management</h3>
+            <p>Understand how to manage tasks and complete work efficiently.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Team Management</h3>
+            <p>Learn about teamwork, leadership and communication.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Quiz -->
+<section class="quiz-section" id="quiz">
+    <h2>Business Knowledge Quiz</h2>
+    <p>Answer the questions and test your business knowledge.</p>
+
+    <div class="quiz-card" id="quizCard">
+        <p class="quiz-progress" id="quizProgress"></p>
+
+        <h3 class="quiz-question" id="quizQuestion"></h3>
+
+        <div class="quiz-options" id="quizOptions"></div>
+
+        <p class="quiz-feedback" id="quizFeedback"></p>
+
+        <button
+            type="button"
+            class="next-btn"
+            id="nextButton"
+            onclick="nextQuestion()"
+            disabled>
+            Next Question
+        </button>
+    </div>
+
+    <div class="result-box hidden" id="quizResult">
+        <h2>Quiz Completed!</h2>
+        <p id="scoreText"></p>
+        <button type="button" class="next-btn" onclick="restartQuiz()">
+            Restart Quiz
+        </button>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: bizhive@example.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Location: Tamil Nadu, India</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 BizHive Business Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+// Quiz Questions Array
+const quizQuestions = [
+    {
+        question: "What is the main purpose of business?",
+        options: [
+            "To provide goods and services",
+            "To waste resources",
+            "To avoid customers",
+            "To stop production"
+        ],
+        answer: 0
+    },
+    {
+        question: "Who manages the employees in an organization?",
+        options: [
+            "Customer",
+            "Human Resource Manager",
+            "Supplier",
+            "Visitor"
+        ],
+        answer: 1
+    },
+    {
+        question: "What does CEO stand for?",
+        options: [
+            "Chief Executive Officer",
+            "Central Education Officer",
+            "Company Employee Organizer",
+            "Chief Engineering Operator"
+        ],
+        answer: 0
+    },
+    {
+        question: "Which activity helps promote a product?",
+        options: [
+            "Marketing",
+            "Sleeping",
+            "Ignoring customers",
+            "Closing the business"
+        ],
+        answer: 0
+    },
+    {
+        question: "What is profit?",
+        options: [
+            "Total expenses",
+            "Revenue minus expenses",
+            "Business loss",
+            "Employee attendance"
+        ],
+        answer: 1
+    }
+];
+
+// Quiz Variables
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+// Display Question
+function showQuestion() {
+    const questionData = quizQuestions[currentQuestion];
+
+    document.getElementById("quizProgress").textContent =
+        "Question " + (currentQuestion + 1) +
+        " of " + quizQuestions.length;
+
+    document.getElementById("quizQuestion").textContent =
+        questionData.question;
+
+    document.getElementById("quizFeedback").textContent = "";
+
+    const optionsContainer =
+        document.getElementById("quizOptions");
+
+    optionsContainer.innerHTML = "";
+
+    questionData.options.forEach(function(option, index) {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "quiz-option";
+        button.textContent = option;
+
+        button.onclick = function() {
+            checkAnswer(index);
+        };
+
+        optionsContainer.appendChild(button);
+    });
+
+    answered = false;
+
+    document.getElementById("nextButton").disabled = true;
+}
+
+// Check Answer
+function checkAnswer(selectedAnswer) {
+    if (answered) {
+        return;
+    }
+
+    answered = true;
+
+    const correctAnswer =
+        quizQuestions[currentQuestion].answer;
+
+    const optionButtons =
+        document.querySelectorAll(".quiz-option");
+
+    optionButtons.forEach(function(button) {
+        button.disabled = true;
+    });
+
+    if (selectedAnswer === correctAnswer) {
+        score++;
+
+        document.getElementById("quizFeedback").textContent =
+            "Correct Answer!";
+    } else {
+        document.getElementById("quizFeedback").textContent =
+            "Incorrect Answer. Correct answer: " +
+            quizQuestions[currentQuestion].options[correctAnswer];
+    }
+
+    document.getElementById("nextButton").disabled = false;
+}
+
+// Next Button Function (onclick)
+function nextQuestion() {
+    if (!answered) {
+        return;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion !== quizQuestions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
+
+// Display Final Score
+function showResult() {
+    document.getElementById("quizCard").classList.add("hidden");
+
+    document.getElementById("quizResult").classList.remove("hidden");
+
+    document.getElementById("scoreText").textContent =
+        "Your Score: " + score + " out of " + quizQuestions.length;
+}
+
+// Restart Quiz
+function restartQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    answered = false;
+
+    document.getElementById("quizCard").classList.remove("hidden");
+
+    document.getElementById("quizResult").classList.add("hidden");
+
+    showQuestion();
+}
+
+// Start Quiz
+showQuestion();
+
+</script>
+
+</body>
+</html>
